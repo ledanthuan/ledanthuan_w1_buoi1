@@ -1,0 +1,352 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.search-container {
+  display: flex;
+}
+
+.search-box {
+  padding: 8px;
+  border: none;
+  border-radius: 4px 0 0 4px;
+}
+
+.search-button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
+/*header section*/
+.hero_area {
+  background-image: url(../images/hero-bg.jpg);
+  background-size: cover;
+}
+
+.slide-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slide-container img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.slide-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* Căn giữa theo chiều dọc */
+  justify-content: space-between;
+  /* Canh giữa theo chiều ngang và tạo khoảng cách giữa các phần tử */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  color: #bfb2b2;
+}
+
+.slide-content h2,  
+.slide-content p {
+  margin: 0;
+  /* Loại bỏ margin mặc định */
+}
+
+.slide-content img {
+  max-width: 50%;
+  /* Đảm bảo ảnh không chiếm quá nhiều không gian */
+}
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  /* Đảm bảo nút điều hướng hiển thị trên ảnh */
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  color: black;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 10px;
+  transition: background-color 0.3s;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s;
+  /* Thêm transition cho hiệu ứng màu */
+}
+
+nav ul li a:hover {
+  color: #ffcc00;
+  /* Màu mới khi con trỏ di chuyển vào */
+}
+
+.home-title {
+  text-align: center;
+  background-color: #f0f0f0;
+  padding: 20px;
+  font-weight: bold;
+  /* Làm cho nội dung đậm hơn */
+  font-size: 24px;
+  /* Đặt kích thước phông chữ lớn hơn */
+}
+.home-title-2 {
+  text-align: center;
+  padding: 20px;
+  font-weight: bold;
+  /* Làm cho nội dung đậm hơn */
+  font-size: 24px;
+  /* Đặt kích thước phông chữ lớn hơn */
+}
+
+.how_section .how_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 45px 60px;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.how_section .how_container .box {
+  text-align: center;
+  margin: 10px;
+  min-width: 200px;
+  width: 325px;
+}
+
+.how_section .how_container .box .img-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 200px;
+  background-color: #f6f5f7;
+}
+
+.how_section .how_container .box .img-box svg {
+  width: 75px;
+  height: auto;
+}
+
+.how_section .how_container .box .detail-box {
+  margin-top: 15px;
+}
+
+.how_section .how_container .box .detail-box h5 {
+  font-weight: bold;
+  position: relative;
+}
+
+.how_section .how_container .box .detail-box h5::before {
+  display: none;
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  width: 75px;
+  height: 2px;
+  background-color: #30ae69;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.how_section .how_container .box .detail-box p {
+  color: #b8b8b8;
+}
+
+.how_section .how_container .box:hover .img-box {
+  background-color: #30ae69;
+}
+
+.how_section .how_container .box:hover .img-box svg {
+  fill: #ffffff;
+}
+
+.how_section .how_container .box:hover .detail-box {
+  margin-top: 15px;
+}
+
+.how_section .how_container .box:hover .detail-box h5::before {
+  display: block;
+}
+
+.how_section .how_container .box:hover .detail-box p {
+  color: #393a3c;
+}
+
+.how_section .btn-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.how_section .btn-box a {
+  display: inline-block;
+  padding: 10px 45px;
+  background-color: #171717;
+  border: 1px solid #171717;
+  color: #ffffff;
+  border-radius: 5px;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.how_section .btn-box a:hover {
+  -webkit-transform: translateY(-3px);
+  transform: translateY(-3px);
+  -webkit-box-shadow: 0px 3px 4px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 3px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+nav ul li:last-child {
+  margin-right: 0;
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* Chia đều thành 4 cột */
+  grid-gap: 20px;
+  /* Khoảng cách giữa các sản phẩm */
+}
+
+.product {
+  text-align: center;
+  /* Căn giữa nội dung */
+}
+
+.product img {
+  max-width: 100%;
+  /* Ảnh động */
+}
+
+.product h2 {
+  margin: 10px 0;
+  /* Khoảng cách giữa tiêu đề và nội dung */
+}
+
+.product p {
+  margin-bottom: 10px;
+  /* Khoảng cách giữa mô tả và giá */
+}
+
+.price {
+  font-weight: bold;
+}
+
+.buy-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.buy-button:hover {
+  background-color: #0056b3;
+}
+.detail-box {
+  text-align: center;
+  /* Để căn giữa nội dung của .detail-box */
+}
+
+.detail-box h5,
+.detail-box p {
+  margin: auto;
+  /* Để căn giữa nội dung của h5 và p */
+  width: 50%;
+  /* Tuỳ chỉnh độ rộng theo ý muốn */
+}
